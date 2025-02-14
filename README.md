@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Canvas Game in React
+SpriteDash
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a **Canvas-based game** built using **React and TypeScript**. It renders a sprite character on an HTML5 Canvas and allows movement through keyboard inputs while handling collision detection and win conditions.
 
-## Available Scripts
+## Features
+- **Canvas Rendering:** Uses the HTML5 Canvas API.
+- **Character Movement:** Controlled using `Arrow` keys.
+- **Collision Detection:** Prevents movement through obstacles.
+- **Dynamic Resizing:** Adjusts game area based on window size.
+- **Win State:** Reaching the goal position ends the game.
 
-In the project directory, you can run:
+## Installation
+### Prerequisites
+- Node.js and npm installed
+- React project setup
 
-### `npm start`
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Rohanhumane/spriteDash.git
+   cd your-repo
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run the project:
+   ```sh
+   npm start
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+- Use the arrow keys to move the character.
+- Avoid obstacles to reach the goal.
+- The game resizes dynamically when the window is resized.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## File Structure
+```
+📁 src
+ ┣ 📂 components
+ ┃ ┗ 📜 Canvas.tsx  # Main game logic
+ ┣ 📂 styles
+ ┃ ┗ 📜 Canvas.module.css  # Styles for canvas
+ ┣ 📂 utils
+ ┃ ┗ 📜 Constant.ts  # Game constants like obstacles and directions
+ ┣ 📜 App.tsx
+ ┣ 📜 index.tsx
+```
 
-### `npm test`
+## Known Issues
+- **Bug Fix Needed:** Incorrect event key name (`"ArowLeft"` instead of `"ArrowLeft"`).
+- **Unused Code:** The `drawPeice` function is commented out but defined.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
+1. Fork the repository.
+2. Create a new branch:
+   ```sh
+   git checkout -b feature-name
+   ```
+3. Commit changes:
+   ```sh
+   git commit -m "Added new feature"
+   ```
+4. Push and create a pull request.
 
-### `npm run build`
+## License
+This project is licensed under the MIT License.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
